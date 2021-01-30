@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &658369921761470101
+--- !u!114 &6407512574419673875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d9729e8603991e40aeb08981719f357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 5
-  continuer: {fileID: 0}
---- !u!1 &1884991446303832807
+  delay: 6
+--- !u!1 &548540908904567541
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22,9 +21,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 20625194419974192}
-  - component: {fileID: 1624376545378656296}
-  - component: {fileID: 5976911119492708449}
+  - component: {fileID: 1396268475145714151}
+  - component: {fileID: 2965527175230670315}
+  - component: {fileID: 7801887061316202332}
   m_Layer: 5
   m_Name: Logic
   m_TagString: Untagged
@@ -32,13 +31,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &20625194419974192
+--- !u!224 &1396268475145714151
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884991446303832807}
+  m_GameObject: {fileID: 548540908904567541}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -51,25 +50,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1624376545378656296
+--- !u!114 &2965527175230670315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884991446303832807}
+  m_GameObject: {fileID: 548540908904567541}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e73e509e4a61ca41ae0100ff2c5b536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5976911119492708449
+--- !u!114 &7801887061316202332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884991446303832807}
+  m_GameObject: {fileID: 548540908904567541}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0653f527dd85b4293ee2ec0c78bafe, type: 3}
@@ -78,15 +77,14 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 0.5
     isWritingDelay: 1
-    content: "Bonjour !\nJe suis A.C.E, votre Aide Contextuelle d'Entreprise, et
-      je vais vous guider tout au long du processus de r\xE9initialisation de mot
-      de passe."
-    expression: 0
+    content: "Ah, vous n'avez pas acc\xE8s \xE0 votre bo\xEEte mail ? Voil\xE0 qui
+      est probl\xE9matique..."
+    expression: 4
   - delayAfterStart: 4
     isWritingDelay: 2
-    content: "Ensemble, nous r\xE9ussirons \xE0 vous rendre l'acc\xE8s \xE0 votre
-      compte !"
-    expression: 0
+    content: "Ne vous inqui\xE9tez pas, nous allons proc\xE9der \xE0 une v\xE9rification
+      de votre identit\xE9 ! Vous serez d\xE9bloqu\xE9 en un rien de temps !"
+    expression: 1
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &7044293393430917387
 GameObject:
@@ -101,7 +99,7 @@ GameObject:
   - component: {fileID: 7044293393430917384}
   - component: {fileID: 7044293393430917385}
   m_Layer: 5
-  m_Name: 02 - Intro
+  m_Name: 08 - Verification d'identite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +118,7 @@ RectTransform:
   m_Children:
   - {fileID: 3042327582924173041}
   - {fileID: 7612307804928800547}
-  - {fileID: 20625194419974192}
+  - {fileID: 1396268475145714151}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -221,10 +219,10 @@ RectTransform:
   m_Father: {fileID: 7044293393430917386}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 431}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7879319344132701528
 CanvasRenderer:
@@ -253,11 +251,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Initialisation de votre Aide Contextuelle d''Entreprise...
-
-
-    Veuillez
-    patienter quelques instants...'
+  m_text: "Bienvenue sur l'utilitaire de v\xE9rification d'identit\xE9.\nVeuillez
+    suivre les \xE9tapes suivantes pour confirmer votre identit\xE9."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -284,8 +279,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -337,6 +332,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Continuer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631773257555855999, guid: 521483944666a044782ed606e1d94de9,
+        type: 3}
+      propertyPath: OnIMAHUMAN
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
@@ -446,7 +446,7 @@ PrefabInstance:
     - target: {fileID: 5957917061211342484, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_Interactable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521483944666a044782ed606e1d94de9, type: 3}

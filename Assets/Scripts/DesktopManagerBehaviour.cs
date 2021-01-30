@@ -8,7 +8,7 @@ public class DesktopManagerBehaviour : MonoBehaviour
     public GameEvent OnTrialSucceed;
     public GameEvent OnTrialFailed;
     public GameEvent OnNextPage;
-    
+
     [Header("Fenetre principale")]
     [Tooltip("La fenêtre de l'application principale")]
     public GameObject mainWindow;
@@ -45,10 +45,12 @@ public class DesktopManagerBehaviour : MonoBehaviour
             clickTime = Time.time;
             nbClicks = 1;
         } else {
+            if (!mainWindow.activeInHierarchy) {
+                windowsIndex = 0;
+                OnNextPage.Invoke();
+            }
             mainWindow.SetActive(true);
             mainWindowFooter.SetActive(true);
-            windowsIndex = 0;
-            OnNextPage.Invoke();
             nbClicks = 0;
             if (!RendererExtensions.IsFullyVisibleFrom(mainWindow.GetComponent<RectTransform>(), Camera.main)) {
                 mainWindow.transform.position = mainWindowInitialPosition;
