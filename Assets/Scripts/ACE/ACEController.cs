@@ -53,8 +53,6 @@ public class ACEController : MonoBehaviour
             yield return new WaitForSeconds(isWritingDelay);
             isWritingInstance.SetActive(false);
         }
-        yield return new WaitForSeconds(0.2f);
-
         aceAnimator.SetInteger("Expression", expression);
         GameObject go = Instantiate(textBubble, Vector3.zero, Quaternion.identity, textBubblesContainer.transform);
         go.GetComponentInChildren<TextMeshProUGUI>().text = content;
