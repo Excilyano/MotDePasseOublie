@@ -4,20 +4,50 @@ using UnityEngine;
 
 public class DesktopManagerBehaviour : MonoBehaviour
 {
+    [Header("Les événements du jeu")]
+    public GameEvent OnTrialSucceed;
+    public GameEvent OnTrialFailed;
+    public GameEvent OnNextPage;
+
+    [Header("Fenetre principale")]
     [Tooltip("La fenêtre de l'application principale")]
     public GameObject mainWindow;
 
     [Tooltip("Le footer en bas de page pour l'app principale")]
     public GameObject mainWindowFooter;
+    private Vector3 mainWindowInitialPosition;
+
+    [Header("Prefabs des differents ecrans de l'application principale")]
+    public GameObject landingPageContent;
+    public GameObject introContent;
+    public GameObject captchaContent;
+    public GameObject passwordContent;
+    public GameObject boiteMailContent;
+    private GameObject currentInstance;
 
     private float clickTime;
     private int nbClicks;
     private float doubleClickDelay;
 
+    private enum GAMESTATE {
+        LANDING_PAGE,
+        INTRO,
+        CAPTCHA_1,
+        PASSWORD,
+        BOITE_MAIL
+    }
+
+    private GAMESTATE currentWindowState;
+
     public void OnEnable() {
         clickTime = float.MinValue;
         nbClicks = 0;
         doubleClickDelay = .8f;
+        mainWindowInitialPosition = mainWindow.transform.position;
+
+        OnTrialSucceed.AddListener(TrialSucceeded);
+        OnTrialFailed.AddListener(TrialFailed);
+        OnNextPage.AddListener(NextPage);
     }
 
     public void MainAppClicked() {
@@ -27,12 +57,20 @@ public class DesktopManagerBehaviour : MonoBehaviour
         } else {
             mainWindow.SetActive(true);
             mainWindowFooter.SetActive(true);
+            currentWindowState = GAMESTATE.LANDING_PAGE;
+            OnNextPage.Invoke();
             nbClicks = 0;
+            if (!RendererExtensions.IsFullyVisibleFrom(mainWindow.GetComponent<RectTransform>(), Camera.main)) {
+                mainWindow.transform.position = mainWindowInitialPosition;
+            }
         }
     }
 
     public void HideOrShowMainApp() {
         mainWindow.SetActive(!mainWindow.activeInHierarchy);
+        if (!RendererExtensions.IsFullyVisibleFrom(mainWindow.GetComponent<RectTransform>(), Camera.main)) {
+            mainWindow.transform.position = mainWindowInitialPosition;
+        }
     }
 
     public void CloseMainApp() {
@@ -42,5 +80,43 @@ public class DesktopManagerBehaviour : MonoBehaviour
 
     public void MenuClicked() {
         Debug.Log("Wesh t'as cliqué sur le menu");
+    }
+
+    private void TrialSucceeded(GameEventPayload load) {
+        Debug.Log("Wééé");
+    }
+
+    private void TrialFailed(GameEventPayload load) {
+        Debug.Log("Bouuuh");
+    }
+
+    private void NextPage(GameEventPayload load) {
+        switch (currentWindowState) {
+            case GAMESTATE.LANDING_PAGE : {
+                currentInstance = Instantiate(landingPageContent, mainWindow.transform);
+                break;
+            }
+            case GAMESTATE.INTRO : {
+                Destroy(currentInstance);
+                currentInstance = Instantiate(introContent, mainWindow.transform);
+                break;
+            }
+            case GAMESTATE.CAPTCHA_1 : {
+                Destroy(currentInstance);
+                currentInstance = Instantiate(captchaContent, mainWindow.transform);
+                break;
+            }
+            case GAMESTATE.PASSWORD : {
+                Destroy(currentInstance);
+                currentInstance = Instantiate(passwordContent, mainWindow.transform);
+                break;
+            }
+            case GAMESTATE.BOITE_MAIL : {
+                Destroy(currentInstance);
+                currentInstance = Instantiate(boiteMailContent, mainWindow.transform);
+                break;
+            }
+        }
+        currentWindowState++;
     }
 }
