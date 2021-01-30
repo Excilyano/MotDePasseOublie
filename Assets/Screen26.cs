@@ -44,7 +44,5 @@ public class Screen26 : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         aceCursor.DOMove(startCursorPos, 1f);
-
-
     }
 }
