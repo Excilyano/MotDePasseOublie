@@ -32,13 +32,30 @@ public class PasswordManager : MonoBehaviour
         passOK &= CheckUpperCase();
         passOK &= CheckLowerCase();
         passOK &= CheckDigit();
-        passOK &= CheckSpecialCar();
-        passOK &= CheckDoubleCar();
-        passOK &= Check777();
-        passOK &= CheckXCar();
-        passOK &= CheckSecure();
-        passOK &= Check22Car();
-
+        if (passOK) {
+            specialConstraint.gameObject.SetActive(true);
+            passOK &= CheckSpecialCar();
+            if (passOK) {
+                doubleConstraint.gameObject.SetActive(true);
+                passOK &= CheckDoubleCar();
+                if (passOK) {
+                    triple7Constraint.gameObject.SetActive(true);
+                    passOK &= Check777();
+                    if (passOK) {
+                        xCarConstraint.gameObject.SetActive(true);
+                        passOK &= CheckXCar();
+                        if (passOK) {
+                            secureConstraint.gameObject.SetActive(true);
+                            passOK &= CheckSecure();
+                            if (passOK) {
+                                max22Constraint.gameObject.SetActive(true);
+                                passOK &= Check22Car();
+                            }
+                        }
+                    }
+                }
+            }
+        }
         nextButton.interactable = (passOK && confirmationOK);
     }
 
@@ -93,9 +110,8 @@ public class PasswordManager : MonoBehaviour
     }
 
     private bool CheckSpecialCar() {
-        // TODO
         bool result = false;
-        if(password.text.ToLower() != password.text) {
+        if(password.text.IndexOfAny(new char[]{'!', ':', '/', ';', '.', '?', ',', '*', '-', '+'}) >= 0) {
             specialConstraint.color = okColor;
             result = true;
         } else {
