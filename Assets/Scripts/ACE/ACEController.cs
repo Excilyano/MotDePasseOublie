@@ -9,7 +9,8 @@ public enum ACEExpression
     Normal = 0,
     Joyful = 1,
     Angry = 2,
-    Sad = 3
+    Sad = 3,
+    Surprise = 4
 }
 
 public class ACEController : MonoBehaviour
