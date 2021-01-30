@@ -1126,7 +1126,8 @@ MonoBehaviour:
     type: 3}
   captchaContent: {fileID: 7044293393430917387, guid: 55e1060ce8568fd4ea69d2948475de98,
     type: 3}
-  passwordContent: {fileID: 0}
+  passwordContent: {fileID: 7044293393430917387, guid: a459242c887afe949bff35d4e8144042,
+    type: 3}
   boiteMailContent: {fileID: 0}
 --- !u!4 &1692971719
 Transform:

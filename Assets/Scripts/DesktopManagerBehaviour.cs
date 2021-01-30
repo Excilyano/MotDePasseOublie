@@ -78,6 +78,7 @@ public class DesktopManagerBehaviour : MonoBehaviour
     }
 
     public void CloseMainApp() {
+        Destroy(currentInstance);
         mainWindow.SetActive(false);
         mainWindowFooter.SetActive(false);
     }
