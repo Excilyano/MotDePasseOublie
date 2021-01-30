@@ -48,7 +48,6 @@ public static class RendererExtensions
     /// <param name="delta">Translation</param>
     public static bool IsFullyVisibleFromWithDelta(this RectTransform rectTransform, Camera camera, Vector2 delta)
     {
-        Debug.Log("delta : " + delta);
         return CountCornersVisibleFrom(rectTransform, camera, new Vector3(delta.x, delta.y, 0f)) == 4; // True if all 4 corners are visible
     }
 }

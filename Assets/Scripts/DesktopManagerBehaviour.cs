@@ -8,8 +8,7 @@ public class DesktopManagerBehaviour : MonoBehaviour
     public GameEvent OnTrialSucceed;
     public GameEvent OnTrialFailed;
     public GameEvent OnNextPage;
-    public GameEvent OnIMHUMAN;
-
+    
     [Header("Fenetre principale")]
     [Tooltip("La fenêtre de l'application principale")]
     public GameObject mainWindow;
@@ -19,27 +18,15 @@ public class DesktopManagerBehaviour : MonoBehaviour
     private Vector3 mainWindowInitialPosition;
 
     [Header("Prefabs des differents ecrans de l'application principale")]
-    public GameObject landingPageContent;
-    public GameObject introContent;
-    public GameObject captchaContent;
-    public GameObject passwordContent;
-    public GameObject boiteMailContent;
-    private GameObject currentInstance;
+    public GameObject[] pageContent;
+    public GameObject currentInstance;
 
     private float clickTime;
     private int nbClicks;
     private float doubleClickDelay;
     private bool isHuman;
 
-    private enum GAMESTATE {
-        LANDING_PAGE,
-        INTRO,
-        CAPTCHA_1,
-        PASSWORD,
-        BOITE_MAIL
-    }
-
-    private GAMESTATE currentWindowState;
+    private int windowsIndex;
 
     public void OnEnable() {
         clickTime = float.MinValue;
@@ -50,7 +37,6 @@ public class DesktopManagerBehaviour : MonoBehaviour
         OnTrialSucceed.AddListener(TrialSucceeded);
         OnTrialFailed.AddListener(TrialFailed);
         OnNextPage.AddListener(NextPage);
-        OnIMHUMAN.AddListener(IsHuman);
 
     }
 
@@ -61,7 +47,7 @@ public class DesktopManagerBehaviour : MonoBehaviour
         } else {
             mainWindow.SetActive(true);
             mainWindowFooter.SetActive(true);
-            currentWindowState = GAMESTATE.LANDING_PAGE;
+            windowsIndex = 0;
             OnNextPage.Invoke();
             nbClicks = 0;
             if (!RendererExtensions.IsFullyVisibleFrom(mainWindow.GetComponent<RectTransform>(), Camera.main)) {
@@ -95,44 +81,10 @@ public class DesktopManagerBehaviour : MonoBehaviour
         Debug.Log("Bouuuh");
     }
 
-    private void IsHuman(GameEventPayload load) {
-        isHuman = load.Get<bool>("isHuman");
-    }
-
     private void NextPage(GameEventPayload load) {
-        switch (currentWindowState) {
-            case GAMESTATE.LANDING_PAGE : {
-                currentInstance = Instantiate(landingPageContent, mainWindow.transform);
-                currentWindowState++;
-                break;
-            }
-            case GAMESTATE.INTRO : {
-                Destroy(currentInstance);
-                currentInstance = Instantiate(introContent, mainWindow.transform);
-                currentWindowState++;
-                break;
-            }
-            case GAMESTATE.CAPTCHA_1 : {
-                Destroy(currentInstance);
-                currentInstance = Instantiate(captchaContent, mainWindow.transform);
-                currentWindowState++;
-                break;
-            }
-            case GAMESTATE.PASSWORD : {
-                if (isHuman) {
-                    Destroy(currentInstance);
-                    currentInstance = Instantiate(passwordContent, mainWindow.transform);
-                    currentWindowState++;
-                }
-                break;
-            }
-            case GAMESTATE.BOITE_MAIL : {
-                Destroy(currentInstance);
-                currentInstance = Instantiate(boiteMailContent, mainWindow.transform);
-                currentWindowState++;
-                break;
-            }
-        }
-        isHuman = false;
+        if (currentInstance != null)
+            Destroy(currentInstance);
+        currentInstance = Instantiate(pageContent[windowsIndex], mainWindow.transform);
+        windowsIndex++;
     }
 }
