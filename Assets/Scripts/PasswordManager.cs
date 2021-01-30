@@ -28,7 +28,6 @@ public class PasswordManager : MonoBehaviour
     
     
     public void OnPasswordChange() {
-        Debug.Log(password.text);
         passOK = true;
         passOK &= CheckUpperCase();
         passOK &= CheckLowerCase();

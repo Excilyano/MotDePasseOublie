@@ -1117,18 +1117,40 @@ MonoBehaviour:
   OnTrialSucceed: {fileID: 11400000, guid: 3dffc87d77d458b4ea42a2ae650a28f0, type: 2}
   OnTrialFailed: {fileID: 11400000, guid: 6e858f56c682bb44aadc935e01bf0f6a, type: 2}
   OnNextPage: {fileID: 11400000, guid: aa39d43a3237aa741a845afe48b18f0c, type: 2}
-  OnIMHUMAN: {fileID: 11400000, guid: cfefa7e19de599b4bb57ada9f2a5587a, type: 2}
   mainWindow: {fileID: 219333719}
   mainWindowFooter: {fileID: 2082231369}
-  landingPageContent: {fileID: 7044293393430917387, guid: 094f3e74ef1f9ea4d948c5be854b31fb,
-    type: 3}
-  introContent: {fileID: 7044293393430917387, guid: 1b602c9d6e84e2c49af25ba7f4de8dff,
-    type: 3}
-  captchaContent: {fileID: 7044293393430917387, guid: 55e1060ce8568fd4ea69d2948475de98,
-    type: 3}
-  passwordContent: {fileID: 7044293393430917387, guid: a459242c887afe949bff35d4e8144042,
-    type: 3}
-  boiteMailContent: {fileID: 0}
+  pageContent:
+  - {fileID: 7044293393430917387, guid: 094f3e74ef1f9ea4d948c5be854b31fb, type: 3}
+  - {fileID: 7044293393430917387, guid: 1b602c9d6e84e2c49af25ba7f4de8dff, type: 3}
+  - {fileID: 7044293393430917387, guid: 55e1060ce8568fd4ea69d2948475de98, type: 3}
+  - {fileID: 7044293393430917387, guid: a459242c887afe949bff35d4e8144042, type: 3}
+  - {fileID: 7044293393430917387, guid: 80731a9e9457b3d4889b92abf1303c0d, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  currentInstance: {fileID: 0}
 --- !u!4 &1692971719
 Transform:
   m_ObjectHideFlags: 0
