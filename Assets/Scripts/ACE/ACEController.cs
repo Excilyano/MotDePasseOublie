@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using DG.Tweening;
 
 public enum ACEExpression
 {
@@ -50,11 +51,23 @@ public class ACEController : MonoBehaviour
         {
             isWritingInstance.transform.SetAsLastSibling();
             isWritingInstance.SetActive(true);
+            isWritingInstance.transform.localScale = Vector3.Scale(isWritingInstance.transform.localScale, new Vector3(1, 0, 1));
+
+            isWritingInstance.transform.DOScaleY(1f, 0.2f);
+
             yield return new WaitForSeconds(isWritingDelay);
+
+            isWritingInstance.transform.DOScaleY(0f, 0.2f);
+
             isWritingInstance.SetActive(false);
         }
         aceAnimator.SetInteger("Expression", expression);
         GameObject go = Instantiate(textBubble, Vector3.zero, Quaternion.identity, textBubblesContainer.transform);
         go.GetComponentInChildren<TextMeshProUGUI>().text = content;
+
+        go.transform.localScale = Vector3.Scale(go.transform.localScale, new Vector3(1, 0, 1));
+
+        go.transform.DOScaleY(1f, 0.3f);
+
     }
 }
