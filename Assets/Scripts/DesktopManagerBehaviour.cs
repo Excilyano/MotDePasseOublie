@@ -8,6 +8,7 @@ public class DesktopManagerBehaviour : MonoBehaviour
     public GameEvent OnTrialSucceed;
     public GameEvent OnTrialFailed;
     public GameEvent OnNextPage;
+    public GameEvent OnIMHUMAN;
 
     [Header("Fenetre principale")]
     [Tooltip("La fenêtre de l'application principale")]
@@ -28,6 +29,7 @@ public class DesktopManagerBehaviour : MonoBehaviour
     private float clickTime;
     private int nbClicks;
     private float doubleClickDelay;
+    private bool isHuman;
 
     private enum GAMESTATE {
         LANDING_PAGE,
@@ -48,6 +50,8 @@ public class DesktopManagerBehaviour : MonoBehaviour
         OnTrialSucceed.AddListener(TrialSucceeded);
         OnTrialFailed.AddListener(TrialFailed);
         OnNextPage.AddListener(NextPage);
+        OnIMHUMAN.AddListener(IsHuman);
+
     }
 
     public void MainAppClicked() {
@@ -90,33 +94,44 @@ public class DesktopManagerBehaviour : MonoBehaviour
         Debug.Log("Bouuuh");
     }
 
+    private void IsHuman(GameEventPayload load) {
+        isHuman = load.Get<bool>("isHuman");
+    }
+
     private void NextPage(GameEventPayload load) {
         switch (currentWindowState) {
             case GAMESTATE.LANDING_PAGE : {
                 currentInstance = Instantiate(landingPageContent, mainWindow.transform);
+                currentWindowState++;
                 break;
             }
             case GAMESTATE.INTRO : {
                 Destroy(currentInstance);
                 currentInstance = Instantiate(introContent, mainWindow.transform);
+                currentWindowState++;
                 break;
             }
             case GAMESTATE.CAPTCHA_1 : {
                 Destroy(currentInstance);
                 currentInstance = Instantiate(captchaContent, mainWindow.transform);
+                currentWindowState++;
                 break;
             }
             case GAMESTATE.PASSWORD : {
-                Destroy(currentInstance);
-                currentInstance = Instantiate(passwordContent, mainWindow.transform);
+                if (isHuman) {
+                    Destroy(currentInstance);
+                    currentInstance = Instantiate(passwordContent, mainWindow.transform);
+                    currentWindowState++;
+                }
                 break;
             }
             case GAMESTATE.BOITE_MAIL : {
                 Destroy(currentInstance);
                 currentInstance = Instantiate(boiteMailContent, mainWindow.transform);
+                currentWindowState++;
                 break;
             }
         }
-        currentWindowState++;
+        isHuman = false;
     }
 }

@@ -1,6 +1,6 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class EventNotifier : MonoBehaviour
 {
@@ -8,6 +8,8 @@ public class EventNotifier : MonoBehaviour
     public GameEvent OnTrialSucceed;
     public GameEvent OnTrialFailed;
     public GameEvent OnNextPage;
+    public GameEvent OnIMAHUMAN;
+    public Button buttonToEnable;
 
     public void TriggerTrialSuccess() {
         OnTrialSucceed.Invoke();
@@ -19,5 +21,12 @@ public class EventNotifier : MonoBehaviour
 
     public void TriggerNextPage() {
         OnNextPage.Invoke();
+    }
+
+    public void TriggerHuman() {
+        Dictionary<string, object> dico = new Dictionary<string, object>();
+        buttonToEnable.interactable = gameObject.GetComponent<Toggle>().isOn;
+        dico.Add("isHuman", gameObject.GetComponent<Toggle>().isOn);
+        OnIMAHUMAN.Invoke(dico);
     }
 }

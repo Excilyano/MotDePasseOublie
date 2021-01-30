@@ -279,3 +279,4 @@ MonoBehaviour:
   OnTrialSucceed: {fileID: 11400000, guid: 3dffc87d77d458b4ea42a2ae650a28f0, type: 2}
   OnTrialFailed: {fileID: 11400000, guid: 6e858f56c682bb44aadc935e01bf0f6a, type: 2}
   OnNextPage: {fileID: 11400000, guid: aa39d43a3237aa741a845afe48b18f0c, type: 2}
+  OnIMAHUMAN: {fileID: 11400000, guid: cfefa7e19de599b4bb57ada9f2a5587a, type: 2}
