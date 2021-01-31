@@ -3044,6 +3044,12 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7535953223680630546, guid: ee0ae7b2b723e3240857e440f7c31398,
+        type: 3}
+      propertyPath: invokeACE
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ad6a7a734591f547ad251af72b83b9d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee0ae7b2b723e3240857e440f7c31398, type: 3}
 --- !u!224 &1290817405 stripped
@@ -3282,6 +3288,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowToDrag: {fileID: 2048595544}
+  prevPosition: {x: 0, y: 0}
+  diff: {x: 0, y: 0}
+  sensibility: 250
 --- !u!114 &1367878043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3941,6 +3950,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowToDrag: {fileID: 219333719}
+  prevPosition: {x: 0, y: 0}
+  diff: {x: 0, y: 0}
+  sensibility: 250
 --- !u!1 &1735127530
 GameObject:
   m_ObjectHideFlags: 0
@@ -5781,6 +5793,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windowToDrag: {fileID: 1389382993}
+  prevPosition: {x: 0, y: 0}
+  diff: {x: 0, y: 0}
+  sensibility: 250
 --- !u!114 &2066556175
 MonoBehaviour:
   m_ObjectHideFlags: 0

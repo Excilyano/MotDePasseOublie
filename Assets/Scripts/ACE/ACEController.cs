@@ -17,6 +17,7 @@ public class ACEController : MonoBehaviour
 {
     [Header("Game Events")]
     public GameEvent callACE;
+    public GameEvent invokeACE;
 
     [Header("Prefabs")]
     public GameObject textBubble;
@@ -33,9 +34,17 @@ public class ACEController : MonoBehaviour
     void OnEnable()
     {
         this.callACE.AddListener(OnCallACE);
+        GetComponent<RectTransform>().localScale = new Vector3(0f, 0.001f, 1f);
+        invokeACE.AddListener((payload) => StartCoroutine(EnableAce()));
 
         isWritingInstance = Instantiate(isWriting, Vector3.zero, Quaternion.identity, textBubblesContainer.transform);
         isWritingInstance.SetActive(false);
+    }
+
+    public IEnumerator EnableAce() {
+        GetComponent<RectTransform>().DOScaleX(1, .3f);
+        yield return new WaitForSeconds(.3f);
+        GetComponent<RectTransform>().DOScaleY(1, .5f);
     }
 
     void OnCallACE(GameEventPayload payload)
@@ -58,7 +67,7 @@ public class ACEController : MonoBehaviour
 
             yield return new WaitForSeconds(isWritingDelay);
 
-            isWritingInstance.transform.DOScaleY(0f, 0.2f);
+            isWritingInstance.transform.DOScaleY(0f, 0.1f);
 
             isWritingInstance.SetActive(false);
         }
@@ -68,7 +77,7 @@ public class ACEController : MonoBehaviour
 
         go.transform.localScale = Vector3.Scale(go.transform.localScale, new Vector3(1, 0, 1));
 
-        go.transform.DOScaleY(1f, 0.3f);
+        go.transform.DOScaleY(1f, 0.2f);
 
     }
 }
