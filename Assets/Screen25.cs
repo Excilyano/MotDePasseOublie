@@ -63,7 +63,7 @@ public class Screen25 : MonoBehaviour
 
     IEnumerator DisplaySolution()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(7f);
 
         foreach (ColorChoice color in solution)
         {

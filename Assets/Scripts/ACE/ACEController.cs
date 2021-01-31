@@ -17,6 +17,7 @@ public class ACEController : MonoBehaviour
 {
     [Header("Game Events")]
     public GameEvent callACE;
+    public GameEvent invokeACE;
 
     [Header("Prefabs")]
     public GameObject textBubble;
@@ -28,14 +29,27 @@ public class ACEController : MonoBehaviour
 
     public Animator aceAnimator;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip isWritingClip;
+    public AudioClip messageClip;
+
     GameObject isWritingInstance;
 
     void OnEnable()
     {
         this.callACE.AddListener(OnCallACE);
+        GetComponent<RectTransform>().localScale = new Vector3(0f, 0.001f, 1f);
+        invokeACE.AddListener((payload) => StartCoroutine(EnableAce()));
 
         isWritingInstance = Instantiate(isWriting, Vector3.zero, Quaternion.identity, textBubblesContainer.transform);
         isWritingInstance.SetActive(false);
+    }
+
+    public IEnumerator EnableAce() {
+        GetComponent<RectTransform>().DOScaleX(1, .3f);
+        yield return new WaitForSeconds(.3f);
+        GetComponent<RectTransform>().DOScaleY(1, .5f);
     }
 
     void OnCallACE(GameEventPayload payload)
@@ -56,19 +70,32 @@ public class ACEController : MonoBehaviour
 
             isWritingInstance.transform.DOScaleY(1f, 0.2f);
 
+            audioSource.Stop();
+            audioSource.clip = isWritingClip;
+            audioSource.loop = true;
+            audioSource.Play();
+
             yield return new WaitForSeconds(isWritingDelay);
+
+            audioSource.Stop();
 
             isWritingInstance.transform.DOScaleY(0f, 0.2f);
 
             isWritingInstance.SetActive(false);
         }
+
+        audioSource.Stop();
+        audioSource.clip = messageClip;
+        audioSource.loop = false;
+        audioSource.Play();
+
         aceAnimator.SetInteger("Expression", expression);
         GameObject go = Instantiate(textBubble, Vector3.zero, Quaternion.identity, textBubblesContainer.transform);
         go.GetComponentInChildren<TextMeshProUGUI>().text = content;
 
         go.transform.localScale = Vector3.Scale(go.transform.localScale, new Vector3(1, 0, 1));
 
-        go.transform.DOScaleY(1f, 0.3f);
+        go.transform.DOScaleY(1f, 0.2f);
 
     }
 }

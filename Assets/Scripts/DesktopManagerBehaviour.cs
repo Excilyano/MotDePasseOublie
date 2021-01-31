@@ -23,6 +23,13 @@ public class DesktopManagerBehaviour : MonoBehaviour
     [Tooltip("Le footer en haut de page pour le toutou")]
     public GameObject toutouWindowFooter;
 
+    [Header("Fenetre paramètres")]
+    [Tooltip("La fenêtre pour les paramètres")]
+    public GameObject parametersWindow;
+
+    [Tooltip("Le footer en haut de page pour les paramètres")]
+    public GameObject parametersWindowFooter;
+
     [Header("Fenetre mail")]
     [Tooltip("La fenêtre pour les mails")]
     public GameObject mailsWindow;
@@ -35,6 +42,7 @@ public class DesktopManagerBehaviour : MonoBehaviour
 
     private Vector3 mainWindowInitialPosition;
     private Vector3 toutouWindowInitialPosition;
+    private Vector3 parametersWindowInitialPosition;
     private Vector3 mailsWindowInitialPosition;
     private Vector3 exitWindowInitialPosition;
 
@@ -49,6 +57,7 @@ public class DesktopManagerBehaviour : MonoBehaviour
     public void OnEnable() {
         mainWindowInitialPosition = mainWindow.transform.position;
         toutouWindowInitialPosition = toutouWindow.transform.position;
+        parametersWindowInitialPosition = parametersWindow.transform.position;
         mailsWindowInitialPosition = mailsWindow.transform.position;
         exitWindowInitialPosition = exitWindow.transform.position;
         
@@ -98,6 +107,26 @@ public class DesktopManagerBehaviour : MonoBehaviour
     public void CloseToutouApp() {
         toutouWindow.SetActive(false);
         toutouWindowFooter.SetActive(false);
+    }
+
+    public void ParametersAppClicked() {
+        parametersWindow.SetActive(true);
+        parametersWindowFooter.SetActive(true);
+        if (!RendererExtensions.IsFullyVisibleFrom(parametersWindow.GetComponent<RectTransform>(), Camera.main)) {
+            parametersWindow.transform.position = parametersWindowInitialPosition;
+        }
+    }
+
+    public void HideOrShowParametersApp() {
+        parametersWindow.SetActive(!parametersWindow.activeInHierarchy);
+        if (!RendererExtensions.IsFullyVisibleFrom(parametersWindow.GetComponent<RectTransform>(), Camera.main)) {
+            parametersWindow.transform.position = parametersWindowInitialPosition;
+        }
+    }
+
+    public void CloseParametersApp() {
+        parametersWindow.SetActive(false);
+        parametersWindowFooter.SetActive(false);
     }
 
     public void MailAppClicked() {
