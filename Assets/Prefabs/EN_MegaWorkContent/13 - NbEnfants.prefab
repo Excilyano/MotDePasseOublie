@@ -166,13 +166,13 @@ MonoBehaviour:
     m_Options:
     - m_Text: ---
       m_Image: {fileID: 0}
-    - m_Text: 0 ou moins
+    - m_Text: 0 or less
       m_Image: {fileID: 0}
     - m_Text: 1
       m_Image: {fileID: 0}
-    - m_Text: Entre 2 et 27 (inclus)
+    - m_Text: Between 2 and 27 (inclusive)
       m_Image: {fileID: 0}
-    - m_Text: Plus de 27
+    - m_Text: More than 27
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1369,8 +1369,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pour confirmer votre identit\xE9, veuillez saisir le nombre d'enfant(s)
-    \xE0 votre charge"
+  m_text: To confirm your identity, please enter the number of dependent children
+    you have.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1529,6 +1529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnIMAHUMAN
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520490502615188574, guid: 521483944666a044782ed606e1d94de9,
+        type: 3}
+      propertyPath: m_text
+      value: Continue
       objectReference: {fileID: 0}
     - target: {fileID: 4520490502615188574, guid: 521483944666a044782ed606e1d94de9,
         type: 3}

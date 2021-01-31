@@ -77,7 +77,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Je ne suis pas un robot
+  m_Text: I am not a robot
 --- !u!1 &3832275609435056250
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,8 +574,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pour poursuivre ce formulaire, veuillez confirmer que vous n'\xEAtes pas
-    un robot :"
+  m_text: 'Too proceed with this form please confirm that
+
+    you are not a robot:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -660,6 +661,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnIMAHUMAN
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520490502615188574, guid: 521483944666a044782ed606e1d94de9,
+        type: 3}
+      propertyPath: m_text
+      value: Continue
       objectReference: {fileID: 0}
     - target: {fileID: 4520490502615188574, guid: 521483944666a044782ed606e1d94de9,
         type: 3}

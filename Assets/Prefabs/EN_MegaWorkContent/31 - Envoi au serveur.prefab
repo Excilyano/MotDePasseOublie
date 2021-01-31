@@ -50,7 +50,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textSending: {fileID: 2059448886244647516}
-  reussite: {fileID: 0}
   continueButton: {fileID: 3447424420430132208}
 --- !u!114 &1101980335544341032
 MonoBehaviour:
@@ -239,7 +238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Envoi des informations d'identification au serveur distant en cours
+  m_text: Sending verification data to remote server
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -319,6 +318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Continuer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520490502615188574, guid: 521483944666a044782ed606e1d94de9,
+        type: 3}
+      propertyPath: m_text
+      value: Continue
       objectReference: {fileID: 0}
     - target: {fileID: 4520490502615188574, guid: 521483944666a044782ed606e1d94de9,
         type: 3}

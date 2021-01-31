@@ -317,7 +317,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Non
+  m_text: No
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1dbd19aa593a6064bafeb520f9de30c2, type: 2}
   m_sharedMaterial: {fileID: 5876312179408399113, guid: 1dbd19aa593a6064bafeb520f9de30c2,
@@ -554,9 +554,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Le piratage du serveur distant n'est disponible qu'aux administrateurs
-    de l'entreprise.\nPour prouver que vous \xEAtes un administrateur, <b>pouvez-vous
-    r\xE9soudre le captcha suivant ?</b>"
+  m_text: 'Hacking the remote server is only available
+
+    to corporate admins.
+
+    To
+    prove that you are an admin, <b>can you solve this captcha ?</b>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -645,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 4520490502615188574, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_text
-      value: Oui
+      value: Yes
       objectReference: {fileID: 0}
     - target: {fileID: 4520490502615188574, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
