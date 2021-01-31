@@ -13,48 +13,57 @@ public class DesktopManagerBehaviour : MonoBehaviour
     [Tooltip("La fenêtre de l'application principale")]
     public GameObject mainWindow;
 
-    [Tooltip("Le footer en bas de page pour l'app principale")]
+    [Tooltip("Le footer en haut de page pour l'app principale")]
     public GameObject mainWindowFooter;
+
+    [Header("Fenetre toutou")]
+    [Tooltip("La fenêtre pour le toutou")]
+    public GameObject toutouWindow;
+
+    [Tooltip("Le footer en haut de page pour le toutou")]
+    public GameObject toutouWindowFooter;
+
+    [Header("Fenetre mail")]
+    [Tooltip("La fenêtre pour les mails")]
+    public GameObject mailsWindow;
+
+    [Tooltip("Le footer en haut de page pour les mails")]
+    public GameObject mailsWindowFooter;
+
+    [Tooltip("La fenêtre exit")]
+    public GameObject exitWindow;
+
     private Vector3 mainWindowInitialPosition;
+    private Vector3 toutouWindowInitialPosition;
+    private Vector3 mailsWindowInitialPosition;
+    private Vector3 exitWindowInitialPosition;
 
     [Header("Prefabs des differents ecrans de l'application principale")]
     public GameObject[] pageContent;
     public GameObject currentInstance;
 
-    private float clickTime;
-    private int nbClicks;
-    private float doubleClickDelay;
     private bool isHuman;
 
     private int windowsIndex;
 
     public void OnEnable() {
-        clickTime = float.MinValue;
-        nbClicks = 0;
-        doubleClickDelay = .8f;
         mainWindowInitialPosition = mainWindow.transform.position;
-
-        OnTrialSucceed.AddListener(TrialSucceeded);
-        OnTrialFailed.AddListener(TrialFailed);
+        toutouWindowInitialPosition = toutouWindow.transform.position;
+        mailsWindowInitialPosition = mailsWindow.transform.position;
+        exitWindowInitialPosition = exitWindow.transform.position;
+        
         OnNextPage.AddListener(NextPage);
-
+        
+        windowsIndex = 0;
+        OnNextPage.Invoke();
     }
 
     public void MainAppClicked() {
-        if (nbClicks == 0 || (nbClicks == 1 && clickTime + doubleClickDelay < Time.time)) {
-            clickTime = Time.time;
-            nbClicks = 1;
-        } else {
-            if (!mainWindow.activeInHierarchy) {
-                windowsIndex = 0;
-                OnNextPage.Invoke();
-            }
-            mainWindow.SetActive(true);
-            mainWindowFooter.SetActive(true);
-            nbClicks = 0;
-            if (!RendererExtensions.IsFullyVisibleFrom(mainWindow.GetComponent<RectTransform>(), Camera.main)) {
-                mainWindow.transform.position = mainWindowInitialPosition;
-            }
+        mainWindow.SetActive(true);
+        mainWindowFooter.SetActive(true);
+        if (currentInstance == null) currentInstance = Instantiate(pageContent[windowsIndex - 1], mainWindow.transform);
+        if (!RendererExtensions.IsFullyVisibleFrom(mainWindow.GetComponent<RectTransform>(), Camera.main)) {
+            mainWindow.transform.position = mainWindowInitialPosition;
         }
     }
 
@@ -71,19 +80,63 @@ public class DesktopManagerBehaviour : MonoBehaviour
         mainWindowFooter.SetActive(false);
     }
 
-    public void MenuClicked() {
-        Debug.Log("Wesh t'as cliqué sur le menu");
+    public void ToutouAppClicked() {
+        toutouWindow.SetActive(true);
+        toutouWindowFooter.SetActive(true);
+        if (!RendererExtensions.IsFullyVisibleFrom(toutouWindow.GetComponent<RectTransform>(), Camera.main)) {
+            toutouWindow.transform.position = toutouWindowInitialPosition;
+        }
     }
 
-    private void TrialSucceeded(GameEventPayload load) {
-        Debug.Log("Wééé");
+    public void HideOrShowToutouApp() {
+        toutouWindow.SetActive(!toutouWindow.activeInHierarchy);
+        if (!RendererExtensions.IsFullyVisibleFrom(toutouWindow.GetComponent<RectTransform>(), Camera.main)) {
+            toutouWindow.transform.position = toutouWindowInitialPosition;
+        }
     }
 
-    private void TrialFailed(GameEventPayload load) {
-        Debug.Log("Bouuuh");
+    public void CloseToutouApp() {
+        toutouWindow.SetActive(false);
+        toutouWindowFooter.SetActive(false);
+    }
+
+    public void MailAppClicked() {
+        mailsWindow.SetActive(true);
+        mailsWindowFooter.SetActive(true);
+        if (!RendererExtensions.IsFullyVisibleFrom(mailsWindow.GetComponent<RectTransform>(), Camera.main)) {
+            mailsWindow.transform.position = mailsWindowInitialPosition;
+        }
+    }
+
+    public void HideOrShowMailApp() {
+        mailsWindow.SetActive(!mailsWindow.activeInHierarchy);
+        if (!RendererExtensions.IsFullyVisibleFrom(mailsWindow.GetComponent<RectTransform>(), Camera.main)) {
+            mailsWindow.transform.position = mailsWindowInitialPosition;
+        }
+    }
+
+    public void CloseMailApp() {
+        mailsWindow.SetActive(false);
+        mailsWindowFooter.SetActive(false);
+    }
+
+    public void ExitAppClicked() {
+        exitWindow.SetActive(true);
+        if (!RendererExtensions.IsFullyVisibleFrom(exitWindow.GetComponent<RectTransform>(), Camera.main)) {
+            exitWindow.transform.position = exitWindowInitialPosition;
+        }
+    }
+
+    public void CloseExitApp() {
+        exitWindow.SetActive(false);
+    }
+
+    public void ExitGame() {
+        Application.Quit();
     }
 
     private void NextPage(GameEventPayload load) {
+        Debug.Log("pouet");
         if (currentInstance != null)
             Destroy(currentInstance);
         currentInstance = Instantiate(pageContent[windowsIndex], mainWindow.transform);
