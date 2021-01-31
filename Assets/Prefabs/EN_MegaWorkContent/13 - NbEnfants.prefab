@@ -377,7 +377,7 @@ MonoBehaviour:
     expression: 0
   - delayAfterStart: 1
     isWritingDelay: 1
-    content: "Hmm, c'est... tr\xE8s personnel en effet..."
+    content: Hmm, that... <i>is</i> personnal indeed...
     expression: 0
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &3015737439861999843

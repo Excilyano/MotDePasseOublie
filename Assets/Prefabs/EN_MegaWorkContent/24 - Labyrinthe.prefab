@@ -1074,12 +1074,11 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 2
     isWritingDelay: 1
-    content: "Mais je n'ai aucun doute sur le fait que vous r\xE9ussissiez tout ce
-      que l'on vous demande !"
+    content: But I am confident you will suceed at anything you are asked for.
     expression: 1
   - delayAfterStart: 5.5
     isWritingDelay: 1
-    content: "J'esp\xE8re quand m\xEAme ne pas \xEAtre <i>inutile</i>."
+    content: Though I hope I am not too <i>useless</i>.
     expression: 0
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &5969730189700822077

@@ -704,8 +704,8 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 0.5
     isWritingDelay: 1.5
-    content: "Anecdote int\xE9ressante : les noms de famille ne furent utilis\xE9s
-      qu'\xE0 partir de 1844 ! Auparavant, les gens n'avaient que des pr\xE9noms..."
+    content: 'Fun fact: last names are used only since 1844! Before that, people
+      only had first names...'
     expression: 0
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &8429016048916941861

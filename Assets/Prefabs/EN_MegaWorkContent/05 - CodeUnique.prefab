@@ -381,13 +381,12 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 0.5
     isWritingDelay: 1
-    content: "Votre nouveau mot de passe est vraiment s\xE9curis\xE9, f\xE9licitations
-      !"
+    content: Your new password is really secure! Congratulations!
     expression: 1
   - delayAfterStart: 3
     isWritingDelay: 1
-    content: "Il ne reste plus qu'une derni\xE8re \xE9tape de v\xE9rification, et
-      vous pourrez reprendre votre activit\xE9 normale."
+    content: There is a last verification step left, before you can go back to you
+      regular activities.
     expression: 0
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &4771964746912415017

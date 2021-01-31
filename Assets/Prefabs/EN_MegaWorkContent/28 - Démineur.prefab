@@ -408,8 +408,8 @@ MonoBehaviour:
     expression: 0
   - delayAfterStart: 2
     isWritingDelay: 1.2
-    content: "Je ne peux quand m\xEAme pas m\u2019emp\xEAcher de me demander : qu\u2019adviendra-t-il
-      de moi si vous red\xE9marrez ce poste ?"
+    content: 'I cannot help but wonder though: what will become of me when you inevitably
+      restart the computer?'
     expression: 0
   - delayAfterStart: 6
     isWritingDelay: 0.6

@@ -125,8 +125,7 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 2
     isWritingDelay: 1
-    content: "J'ai du mal \xE0 comprendre en quoi cette question prouve quoi que
-      ce soit..."
+    content: I fail to understand how this question proves anything.
     expression: 0
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &7044293393430917387

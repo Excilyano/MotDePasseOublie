@@ -77,14 +77,14 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 0.5
     isWritingDelay: 1
-    content: "Bonjour !\nJe suis A.C.E, votre Aide Contextuelle d'Entreprise, et
-      je vais vous guider tout au long du processus de r\xE9initialisation de mot
-      de passe."
+    content: 'Hello !
+
+      I am A.C.E, your Corporate hElp Assistant. As such,
+      I will guide you through the password reset process.'
     expression: 0
   - delayAfterStart: 4
     isWritingDelay: 2
-    content: "Ensemble, nous r\xE9ussirons \xE0 vous rendre l'acc\xE8s \xE0 votre
-      compte !"
+    content: Together, we will retrieve the access to your account.
     expression: 0
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &7044293393430917387
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Initializing Corporate hElp Assistant (ACE)...
+  m_text: 'Initializing Corporate hElp Assistant...
 
 
     Please wait...'

@@ -217,8 +217,8 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 0.5
     isWritingDelay: 1
-    content: "Avant toute chose... Nous devons encore nous assurer que vous n'\xEAtes
-      pas un robot."
+    content: First and foremost... we must ensure that you are indeed, <i>not</i>
+      a robot.
     expression: 0
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &4104867839203618929
@@ -574,7 +574,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Too proceed with this form please confirm that
+  m_text: 'To proceed with this form please confirm that
 
     you are not a robot:'
   m_isRightToLeft: 0

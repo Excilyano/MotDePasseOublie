@@ -51,12 +51,12 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 2
     isWritingDelay: 1
-    content: Par ailleurs, j'aimerais vous remercier pour votre patience.
+    content: By the way, thank you for your fierce patience.
     expression: 1
   - delayAfterStart: 5.5
     isWritingDelay: 1.3
-    content: Je sais que la bureaucratie et ces <i>processus d'entreprise</i> ne
-      vous amuse pas plus que moi.
+    content: I know all of this bureaucracy and <i>corporate process</i> are no funnier
+      to you than to me.
     expression: 0
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &7044293393430917387

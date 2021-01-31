@@ -1237,12 +1237,12 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 0
     isWritingDelay: 1.5
-    content: "Voil\xE0, normalement j'ai tout ce qu'il me faut."
+    content: "Voil\xE0! I should have everything i need."
     expression: 1
   - delayAfterStart: 3
     isWritingDelay: 3
-    content: "Laissez-moi quelques instants, je contacte le Serveur Distant S\xE9curis\xE9.
-      Cette situation sera bient\xF4t r\xE9gl\xE9e, je vous le promets !"
+    content: Give me a moment, I will contact the remoste secure server. This predicament
+      will be over soon, that is a promess !
     expression: 1
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!114 &428738279796162235

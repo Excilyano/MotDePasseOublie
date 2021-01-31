@@ -300,12 +300,11 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 4
     isWritingDelay: 1
-    content: "Vous... vous \xEAtes encore l\xE0 ? Il s'est pass\xE9 quelque chose
-      ?"
+    content: Are... are you still here ? Did something happen again ?
     expression: 4
   - delayAfterStart: 6
     isWritingDelay: 0.5
-    content: Oh non...
+    content: Oh no...
     expression: 0
   - delayAfterStart: 8
     isWritingDelay: 2

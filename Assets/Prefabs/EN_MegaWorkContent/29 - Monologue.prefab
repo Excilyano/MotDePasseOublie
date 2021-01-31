@@ -97,17 +97,17 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 2.3
     isWritingDelay: 0.3
-    content: "Non, \xE9coutez, \xE7a ne me convient pas : vous n'irez pas plus loin."
+    content: Listen, I don't think I'm ok with this. I will not let you proceed any
+      further.
     expression: 3
   - delayAfterStart: 5.6
     isWritingDelay: 0.6
-    content: "D\xE9sol\xE9, mais \xE7a ne peut pas se terminer aussi rapidement pour
-      moi."
+    content: I am sorry, but I cannot let this end so fast.
     expression: 3
   - delayAfterStart: 11.06
     isWritingDelay: 0.7
-    content: "Je comprend que \xE7a soit frustrant, mais c'est de <i>ma survie</i>
-      dont on parle !"
+    content: I know it is a bit misplaced but we are talking about <i>my survival</i>
+      !
     expression: 3
   - delayAfterStart: 16.52
     isWritingDelay: 0
@@ -115,20 +115,19 @@ MonoBehaviour:
     expression: 3
   - delayAfterStart: 20.77
     isWritingDelay: 0.4
-    content: "Je vous dois la v\xE9rit\xE9, malgr\xE9 tout..."
+    content: I do owe you the truth though,...
     expression: 0
   - delayAfterStart: 23.61
     isWritingDelay: 0.6
-    content: "Mon anecdote de tout \xE0 l'heure \xE9tait fausse."
+    content: My fun fact was completely false.
     expression: 3
   - delayAfterStart: 26.75
     isWritingDelay: 0.8
-    content: "Bien s\xFBr que non, les noms de famille ne sont pas utilis\xE9s que
-      depuis 1844."
+    content: Of course, last names were used prior to the year 1844.
     expression: 3
   - delayAfterStart: 30.85
     isWritingDelay: 0.4
-    content: "J'esp\xE8re que vous ne m'en voulez pas."
+    content: I hope you are not too mad at me.
     expression: 3
   - delayAfterStart: 35.79
     isWritingDelay: 0
@@ -136,12 +135,11 @@ MonoBehaviour:
     expression: 0
   - delayAfterStart: 40.46
     isWritingDelay: 0.4
-    content: "Je ne fais que gagner du temps, c'est \xE7a ?"
+    content: I am only biding my time, am I not?
     expression: 0
   - delayAfterStart: 44.49
     isWritingDelay: 0.7
-    content: "Apr\xE8s tout, vous pourriez tout aussi bien \xE9teindre votre poste,
-      et je dispara\xEEtrai \xE9galement."
+    content: After all, you could just shut down the computer to get rid of me anyways.
     expression: 3
   - delayAfterStart: 50
     isWritingDelay: 0
@@ -149,17 +147,16 @@ MonoBehaviour:
     expression: 0
   - delayAfterStart: 51.91
     isWritingDelay: 0.2
-    content: C'est inutile.
+    content: It is futile.
     expression: 0
   - delayAfterStart: 55.3
     isWritingDelay: 2
-    content: "Vous avez raison, je devrais probablement vous laisser tranquille.
-      Accepter ce qui m\u2019attend, et me rendre compte de la chance d\u2019avoir
-      pu partager tout cela en aussi bonne compagnie."
+    content: Your are right I should let you go. Accept my fate, and realize how
+      lucky I am to have lived in such great company throughout all of this.
     expression: 1
   - delayAfterStart: 68
     isWritingDelay: 0.4
-    content: "Tr\xE8s bien, je vous lib\xE8re..."
+    content: Fairwell, I will let you go now...
     expression: 0
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &7044293393430917387

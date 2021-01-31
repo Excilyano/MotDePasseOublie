@@ -1211,13 +1211,12 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 0.5
     isWritingDelay: 1
-    content: "Non mais \xE7a devient n'importe quoi ces questions !"
+    content: Those questions are getting ridiculous!
     expression: 2
   - delayAfterStart: 3
     isWritingDelay: 3
-    content: "Ecoutez, ces questions ne nous am\xE8nent visiblement nul part. Je
-      vous fais confiance, alors que diriez-vous que nous passions tout de suite
-      \xE0 la fin ?"
+    content: Look, those are not getting us anywhere. I trust you, so how about we
+      skip ahead a few, and go straight to the end?
     expression: 0
   - delayAfterStart: 8
     isWritingDelay: 1.5

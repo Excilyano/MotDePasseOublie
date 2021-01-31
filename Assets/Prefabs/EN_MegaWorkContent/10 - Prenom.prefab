@@ -602,8 +602,8 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 0.5
     isWritingDelay: 4
-    content: "Ah. Les fameuses questions personnelles. Rien de tel pour prouver que
-      vous \xEAtes bien celui ou celle que vous pr\xE9tendez \xEAtre !"
+    content: Ah-ah! Personal questions. The most accurate and senseful way to ensure
+      that you are who you claim to be.
     expression: 0
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &7044293393430917387

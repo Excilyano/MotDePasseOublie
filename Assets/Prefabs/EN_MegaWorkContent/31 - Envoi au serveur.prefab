@@ -66,11 +66,11 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 0.5
     isWritingDelay: 1
-    content: "Et voil\xE0, dans quelques instants vous serez lib\xE9r\xE9..."
+    content: Here it is, in a few instants you will be free...
     expression: 0
   - delayAfterStart: 3
     isWritingDelay: 1
-    content: ... et moi aussi.
+    content: ... and so will I!
     expression: 3
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &7044293393430917387

@@ -263,7 +263,7 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 0.5
     isWritingDelay: 1
-    content: Encore quelques questions personnelles, et vous toucherez au but !
+    content: Just a few more personnal questions, and we will be done.
     expression: 0
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &1921535195551988176

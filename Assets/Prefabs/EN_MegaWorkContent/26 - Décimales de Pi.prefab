@@ -201,11 +201,11 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 2
     isWritingDelay: 0.5
-    content: "Celui l\xE0 risque de prendre du temps !"
+    content: This one <b>is going to</b> take you a while
     expression: 4
   - delayAfterStart: 3.5
     isWritingDelay: 0.5
-    content: Attendez, laissez moi faire je m'en occupe !
+    content: Well... it <i>would</i>. Let me handle this!
     expression: 1
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &6061898820691479767
@@ -829,9 +829,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Le piratage du serveur distant n'est disponible qu'aux administrateurs
-    de l'entreprise.\nPour prouver que vous \xEAtes un administrateur, <b>entrez
-    les 100 premi\xE8res d\xE9cimales de pi</b> :"
+  m_text: 'Hacking the remote server is only available
+
+    to corporate admins.
+
+    To
+    prove that you are an admin, <b>enter the 100 first decimals of PI bellow</b>
+    :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -916,6 +920,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnIMAHUMAN
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520490502615188574, guid: 521483944666a044782ed606e1d94de9,
+        type: 3}
+      propertyPath: m_text
+      value: Continue
       objectReference: {fileID: 0}
     - target: {fileID: 4520490502615188574, guid: 521483944666a044782ed606e1d94de9,
         type: 3}

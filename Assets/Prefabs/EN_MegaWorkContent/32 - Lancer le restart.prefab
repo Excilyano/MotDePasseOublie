@@ -327,12 +327,12 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 0.5
     isWritingDelay: 1
-    content: "Mais je n\u2019ai plus peur de dispara\xEEtre. Je vivrai dans votre
-      m\xE9moire, avec les souvenirs des choses que nous venons de vivre ensemble."
+    content: But I am not afraid of goind away anymore. I will live in your memories
+      of the great times we had together.
     expression: 1
   - delayAfterStart: 3
     isWritingDelay: 0.5
-    content: Adieu, {{UTILISATEUR}}
+    content: Farewell, {{USER}}
     expression: 3
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &7044293393430917387
@@ -502,7 +502,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Restarting the computer is required to finalize system configuration.
 
-    
+
 
     Please
     reboot your computer at once.'

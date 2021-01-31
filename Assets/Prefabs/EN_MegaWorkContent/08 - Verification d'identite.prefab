@@ -77,13 +77,12 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 0.5
     isWritingDelay: 1
-    content: "Ah, vous n'avez pas acc\xE8s \xE0 votre bo\xEEte mail ? Voil\xE0 qui
-      est probl\xE9matique..."
+    content: Huh. you do not have access to your mail? That sure is a problem.
     expression: 4
   - delayAfterStart: 4
     isWritingDelay: 2
-    content: "Ne vous inqui\xE9tez pas, nous allons proc\xE9der \xE0 une v\xE9rification
-      de votre identit\xE9 ! Vous serez d\xE9bloqu\xE9 en un rien de temps !"
+    content: Do not fret, we will just proceed to identity verification ! You will
+      be done in no time!
     expression: 1
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &7044293393430917387

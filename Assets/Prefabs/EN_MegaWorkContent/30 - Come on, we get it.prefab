@@ -462,11 +462,11 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 0.5
     isWritingDelay: 0.3
-    content: "<b><i>Oh, c'est bon, on a compris \xE0 la fin !</i></b>"
+    content: <b><i>Oh, we get it already !</i></b>
     expression: 2
   - delayAfterStart: 1
     isWritingDelay: 0.3
-    content: Laissez-moi faire.
+    content: Just let me do the thing!
     expression: 2
   callACE: {fileID: 11400000, guid: 1d8e5b30e905bbe4b8dd59fab242f679, type: 2}
 --- !u!1 &7026016645670456660
