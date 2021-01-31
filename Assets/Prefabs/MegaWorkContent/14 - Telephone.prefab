@@ -623,6 +623,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: 0, y: 0, z: 0, w: 0}
   m_Softness: {x: 0, y: 0}
+--- !u!114 &3111027943372747624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4640195938492728603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d88aaac306c0e48bb4ee8b13e7a1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 4
+  telephoneField: {fileID: 6478503676295635151}
+  button1: {fileID: 3072724785414602446}
+  button2: {fileID: 4440377461193422338}
 --- !u!1 &4876404574049078532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,6 +1511,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521483944666a044782ed606e1d94de9, type: 3}
+--- !u!1 &4640195938492728603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3363438019190951932, guid: 521483944666a044782ed606e1d94de9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7982661752636197607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2932595015630760493 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,

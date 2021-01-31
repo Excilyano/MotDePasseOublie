@@ -657,7 +657,7 @@ GameObject:
   - component: {fileID: 377357055052282955}
   - component: {fileID: 3730584261036585708}
   - component: {fileID: 5999619274417914230}
-  - component: {fileID: 5263397630128270173}
+  - component: {fileID: 5298861232679128082}
   m_Layer: 5
   m_Name: InputField (TMP)
   m_TagString: Untagged
@@ -801,8 +801,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5263397630128270173}
-        m_MethodName: EnableContinuer
+      - m_Target: {fileID: 5298861232679128082}
+        m_MethodName: EnableContinuerForToutou
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -830,7 +830,7 @@ MonoBehaviour:
   m_isRichTextEditingAllowed: 0
   m_LineLimit: 0
   m_InputValidator: {fileID: 0}
---- !u!114 &5263397630128270173
+--- !u!114 &5298861232679128082
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
