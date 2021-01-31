@@ -8,7 +8,13 @@ public class DragAndDropBehaviour : MonoBehaviour, IDragHandler
     
     // Le Vector2 représentant la position du curseur à l'instant t-1
     // pour calculer le vecteur de translation
-    private Vector2 prevPosition = Vector2.zero;
+    [HideInInspector]
+    public Vector2 prevPosition = Vector2.zero;
+    [HideInInspector]
+    public Vector2 diff;
+
+    [HideInInspector]
+    public float sensibility = 250f;
 
     void OnEnable() {
         prevPosition = Vector2.zero;
@@ -17,8 +23,8 @@ public class DragAndDropBehaviour : MonoBehaviour, IDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        Vector2 diff = eventData.position - prevPosition;
-        if (prevPosition != Vector2.zero && diff.magnitude < 250) {
+        diff = eventData.position - prevPosition;
+        if (prevPosition != Vector2.zero && diff.magnitude < sensibility) {
             windowToDrag.transform.Translate(diff);
         }
         prevPosition = eventData.position;
