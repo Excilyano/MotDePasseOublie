@@ -28,6 +28,11 @@ public class ACEController : MonoBehaviour
 
     public Animator aceAnimator;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip isWritingClip;
+    public AudioClip messageClip;
+
     GameObject isWritingInstance;
 
     void OnEnable()
@@ -56,12 +61,25 @@ public class ACEController : MonoBehaviour
 
             isWritingInstance.transform.DOScaleY(1f, 0.2f);
 
+            audioSource.Stop();
+            audioSource.clip = isWritingClip;
+            audioSource.loop = true;
+            audioSource.Play();
+
             yield return new WaitForSeconds(isWritingDelay);
+
+            audioSource.Stop();
 
             isWritingInstance.transform.DOScaleY(0f, 0.2f);
 
             isWritingInstance.SetActive(false);
         }
+
+        audioSource.Stop();
+        audioSource.clip = messageClip;
+        audioSource.loop = false;
+        audioSource.Play();
+
         aceAnimator.SetInteger("Expression", expression);
         GameObject go = Instantiate(textBubble, Vector3.zero, Quaternion.identity, textBubblesContainer.transform);
         go.GetComponentInChildren<TextMeshProUGUI>().text = content;
