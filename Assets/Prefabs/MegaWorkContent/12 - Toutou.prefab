@@ -35,10 +35,10 @@ RectTransform:
   m_Father: {fileID: 7044293393430917386}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.45}
-  m_AnchorMax: {x: 0.5, y: 0.45}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 484, y: 30}
+  m_SizeDelta: {x: 484, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3561887879453186764
 CanvasRenderer:
@@ -357,15 +357,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
+  m_fontSize: 72
   m_fontSizeBase: 14
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -543,15 +543,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
+  m_fontSize: 24.15
   m_fontSizeBase: 14
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -739,10 +739,10 @@ RectTransform:
   m_Father: {fileID: 7044293393430917386}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.55}
-  m_AnchorMax: {x: 1, y: 0.55}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 40}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7879319344132701528
 CanvasRenderer:
@@ -806,7 +806,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -857,15 +857,20 @@ PrefabInstance:
       propertyPath: OnIMAHUMAN
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4520490502615188574, guid: 521483944666a044782ed606e1d94de9,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 29.65
+      objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
@@ -875,32 +880,32 @@ PrefabInstance:
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.65
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 403
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
@@ -965,6 +970,11 @@ PrefabInstance:
     - target: {fileID: 5957917061211342484, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957917061211342484, guid: 521483944666a044782ed606e1d94de9,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

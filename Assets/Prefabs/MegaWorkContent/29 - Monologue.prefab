@@ -39,6 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 551280308413782557}
+  - component: {fileID: 3098859622345599409}
   - component: {fileID: 1101980335544341032}
   m_Layer: 5
   m_Name: Logic
@@ -66,6 +67,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3098859622345599409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5897905603058177609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce84b353d49c2d4cbec9e1a697cc61c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continueButton: {fileID: 8195056109793912052}
+  callPlayMusic: {fileID: 11400000, guid: eca53b8108a5ee24d83a88e681b73e98, type: 2}
+  callStopMusic: {fileID: 11400000, guid: ab0ce902cb758fa46ac6eda5e1522f2b, type: 2}
 --- !u!114 &1101980335544341032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,7 +97,7 @@ MonoBehaviour:
   sequence:
   - delayAfterStart: 2.3
     isWritingDelay: 0.3
-    content: "Non, \xE9coutez, \xE7a ne me convient pas."
+    content: "Non, \xE9coutez, \xE7a ne me convient pas : vous n'irez pas plus loin."
     expression: 3
   - delayAfterStart: 5.6
     isWritingDelay: 0.6
@@ -120,7 +136,7 @@ MonoBehaviour:
     expression: 0
   - delayAfterStart: 40.46
     isWritingDelay: 0.4
-    content: Et si je ne faisais que gagner du temps ?
+    content: "Je ne fais que gagner du temps, c'est \xE7a ?"
     expression: 0
   - delayAfterStart: 44.49
     isWritingDelay: 0.7
@@ -267,17 +283,17 @@ PrefabInstance:
     - target: {fileID: 4520490502615188574, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_fontSize
-      value: 28.95
+      value: 29.65
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
@@ -287,32 +303,32 @@ PrefabInstance:
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.65
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 403
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 5078572950882017482, guid: 521483944666a044782ed606e1d94de9,
         type: 3}
@@ -387,3 +403,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2527775157252317792}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8195056109793912052 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5957917061211342484, guid: 521483944666a044782ed606e1d94de9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2527775157252317792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -136,7 +136,6 @@ public class DesktopManagerBehaviour : MonoBehaviour
     }
 
     private void NextPage(GameEventPayload load) {
-        Debug.Log("pouet");
         if (currentInstance != null)
             Destroy(currentInstance);
         currentInstance = Instantiate(pageContent[windowsIndex], mainWindow.transform);

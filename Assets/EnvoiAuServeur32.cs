@@ -8,8 +8,6 @@ public class EnvoiAuServeur32 : MonoBehaviour
 {
     public TextMeshProUGUI textSending;
 
-    public TextMeshProUGUI reussite;
-
     public Button continueButton;
 
 
@@ -19,7 +17,6 @@ public class EnvoiAuServeur32 : MonoBehaviour
     {
         startText = textSending.text;
         StartCoroutine(Sequence());
-        reussite.gameObject.SetActive(false);
         continueButton.interactable = false;
 
     }
@@ -28,13 +25,14 @@ public class EnvoiAuServeur32 : MonoBehaviour
     {
         for (int i = 0; i < 24; i++)
         {
-            textSending.text = startText + new string('.', (i % 3)+1);
+            textSending.text = startText + "\n" + new string('.', (i % 3)+1);
             yield return new WaitForSeconds(0.25f);
         }
 
         yield return new WaitForSeconds(0.5f);
 
-        reussite.gameObject.SetActive(true);
+        textSending.text += "\n\nREUSSITE";
+
         continueButton.interactable = true;
     }
 }
