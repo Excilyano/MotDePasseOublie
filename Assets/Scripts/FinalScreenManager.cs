@@ -6,8 +6,12 @@ public class FinalScreenManager : MonoBehaviour
 {
     public GameObject reboot;
     public GameObject bluescreen;
-    // Start is called before the first frame update
-    void Start()
+
+    public AudioSource audioSource;
+    public AudioClip startup;
+    public AudioClip bug;
+
+    void Awake()
     {
         reboot.SetActive(true);
         bluescreen.SetActive(false);
@@ -17,7 +21,16 @@ public class FinalScreenManager : MonoBehaviour
     }
 
     IEnumerator BlueScreenAppear() {
-        yield return new WaitForSeconds(8f);
+        audioSource.clip = startup;
+        audioSource.Play();
+
+        yield return new WaitForSeconds(7f);
+        audioSource.Stop();
+        audioSource.clip = bug;
+        audioSource.loop = false;
+        audioSource.Play();
+        yield return new WaitForSeconds(.5f);
+
         reboot.SetActive(false);
         bluescreen.SetActive(true);
 
